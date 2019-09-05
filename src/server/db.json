@@ -1,0 +1,130 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "Frogger",
+      "year": 1981,
+      "genre": "Action",
+      "url": "https://en.wikipedia.org/wiki/Frogger",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/frogger.png"
+    },
+    {
+      "id": 2,
+      "title": "Choplifter",
+      "year": 1982,
+      "genre": "Action",
+      "url": "https://en.wikipedia.org/wiki/Choplifter",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/choplifter.png"
+    },
+    {
+      "id": 3,
+      "title": "Ms. Pac-Man",
+      "year": 1982,
+      "genre": "Maze",
+      "url": "https://en.wikipedia.org/wiki/Ms._Pac-Man",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/ms-pac-man.gif"
+    },
+    {
+      "id": 4,
+      "title": "Ghostbusters",
+      "year": 1984,
+      "genre": "Action-adventure",
+      "url": "https://en.wikipedia.org/wiki/Ghostbusters_(1984_video_game)",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/ghostbusters.gif"
+    },
+    {
+      "id": 5,
+      "title": "Kung-Fu Master",
+      "year": 1984,
+      "genre": "beat'em up",
+      "url": "https://en.wikipedia.org/wiki/Kung-Fu_Master_(video_game)",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/kung-fu-master.gif"
+    },
+    {
+      "id": 6,
+      "title": "Commando",
+      "year": 1985,
+      "genre": "Rung and Gun",
+      "url": "https://en.wikipedia.org/wiki/Commando_(video_game)",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/commando.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Ghosts'n Goblins",
+      "year": 1985,
+      "genre": "Platform",
+      "url": "https://en.wikipedia.org/wiki/Ghosts_%27n_Goblins_(video_game)",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/ghosts-goblins.jpg"
+    },
+    {
+      "id": 8,
+      "title": "International Karate",
+      "year": 1985,
+      "genre": "Fighting",
+      "url": "https://en.wikipedia.org/wiki/International_Karate",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/international-karate.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Paperboy",
+      "year": 1985,
+      "genre": "Action",
+      "url": "https://en.wikipedia.org/wiki/Paperboy_(video_game)",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/paperboy.png"
+    },
+    {
+      "id": 10,
+      "title": "The Goonies",
+      "year": 1985,
+      "genre": "puzzle",
+      "url": "https://en.wikipedia.org/wiki/The_Goonies#Video_games",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/the-goonies.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Out Run",
+      "year": 1986,
+      "genre": "Arcade Racing",
+      "url": "https://en.wikipedia.org/wiki/Out_Run",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/out-run.png"
+    },
+    {
+      "id": 12,
+      "title": "Wonder Boy",
+      "year": 1986,
+      "genre": "Platform",
+      "url": "https://en.wikipedia.org/wiki/Wonder_Boy_(video_game)",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/wonder-boy.png"
+    },
+    {
+      "id": 13,
+      "title": "California Games",
+      "year": 1987,
+      "genre": "Sports",
+      "url": "https://en.wikipedia.org/wiki/California_Games",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/california-games.gif"
+    },
+    {
+      "id": 14,
+      "title": "Emlyn Hughes International Soccer",
+      "year": 1988,
+      "genre": "Sports",
+      "url": "https://en.wikipedia.org/wiki/Emlyn_Hughes_International_Soccer",
+      "status": "not-started",
+      "img": "http://localhost:3001/img/ehis.gif"
+    }
+  ]
+}

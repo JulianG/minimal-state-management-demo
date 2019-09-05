@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "server": "node ./src/server/server.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "json-server": "^0.15.1",
     "prettier": "^1.18.2"
   }
 }
