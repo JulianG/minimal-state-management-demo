@@ -1,15 +1,7 @@
 import React from 'react';
-
-const getGames = () => {
-  return fetch('http://localhost:3001/games/').then(response => response.json());
-};
+import { useGames } from './useGames';
 
 export const App = () => {
-  const [games, setGames] = React.useState([]);
-
-  React.useEffect(() => {
-    getGames().then(games => setGames(games));
-  }, []);
-
+  const games = useGames();
   return <pre>{JSON.stringify(games, null, 2)}</pre>;
 };
