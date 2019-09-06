@@ -1,9 +1,5 @@
 import { useAsyncFunction } from './useAsyncFunction';
 
-const getGames = (): Promise<Game[]> => {
-  return fetch('http://localhost:3001/games/').then(response => response.json());
-};
-
 type Game = {
   id: number;
   title: string;
@@ -16,7 +12,16 @@ type Game = {
 
 const emptyList: Game[] = [];
 
+const getGames = (): Promise<Game[]> => {
+  return fetch('http://localhost:3001/games/').then(response => {
+    if (response.status !== 200) {
+      throw new Error(`${response.status} ${response.statusText}`);
+    }
+    return response.json();
+  });
+};
+
 export const useGames = () => {
-  const [games] = useAsyncFunction(getGames, emptyList);
-  return games;
+  const [games, error, isPending] = useAsyncFunction(getGames, emptyList);
+  return { games, error, isPending };
 };
