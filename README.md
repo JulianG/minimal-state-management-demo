@@ -1,3 +1,24 @@
+# Minimal State Management in React
+
+## How to use:
+
+**First install all dependencies**
+```
+yarn install
+```
+
+**Then run the fake REST API.** It's a [json-server](https://github.com/typicode/json-server) on port 3001.
+```
+yarn server
+```
+
+**Then run the client**. A basic React app on port 3000.
+```
+yarn start
+```
+
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
