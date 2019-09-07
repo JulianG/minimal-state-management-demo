@@ -1,3 +1,4 @@
+import React from 'react';
 import { useAsyncFunction } from './useAsyncFunction';
 
 export type Game = {
@@ -30,11 +31,25 @@ export const setGameStatus = (id: number, status: Game['status']): Promise<Game>
 };
 
 export const useGames = () => {
-  const [games, error, isPending] = useAsyncFunction(getGames, emptyList);
+  const [fetchedGames, error, isPending] = useAsyncFunction(getGames, emptyList);
 
+  const [games, setGames] = React.useState(emptyList);
+  React.useEffect(() => {
+    setGames(fetchedGames);
+  }, [fetchedGames]);
+
+  const updateGame = (game: Game) => {
+    const index = games.findIndex(g => g.id === game.id);
+    if (index >= 0) {
+      const gamesCopy = games.slice();
+      gamesCopy[index] = game;
+      setGames(gamesCopy);
+    }
+  };
   const markAsFinished = (id: number) => {
-    setGameStatus(id, 'finished');
+    setGameStatus(id, 'finished').then(updateGame);
   };
 
   return { games, error, isPending, markAsFinished };
 };
+
