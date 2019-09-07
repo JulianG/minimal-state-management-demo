@@ -17,6 +17,8 @@ yarn server
 yarn start
 ```
 
+Note: Changes to the server data are persisted between calls, but never saved to disk. You can easily reset the "database" by restarting the server.
+
 ----
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
