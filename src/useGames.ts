@@ -27,7 +27,15 @@ export const useGames = () => {
     }
   };
   const markAsFinished = (id: number) => {
-    setGameStatus(id, 'finished').then(updateGame);
+    setGameStatus(id, 'finished')
+      .then(updateGame)
+      .catch(error =>
+        alert(
+          `There was a problem updating this game.\n` +
+            `Please try again later.\n\n` +
+            `(${error.toString()})`
+        )
+      );
   };
 
   return { games, error, isPending, markAsFinished };
