@@ -1,5 +1,6 @@
 import React from 'react';
-import { useGames, Game } from './useGames';
+import { useGames } from './useGames';
+import { Game } from './gameClientAPI';
 
 export const App = () => {
   const { games, error, isPending, markAsFinished } = useGames();
