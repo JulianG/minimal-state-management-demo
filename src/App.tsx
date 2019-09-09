@@ -7,16 +7,14 @@ export const App = () => {
 
   return (
     <>
+      <h1>My Favourite Commodore 64 Games</h1>
       {error && <pre>ERROR! {error}...</pre>}
       {isPending && <pre>LOADING...</pre>}
-      <ol>
+      <div className="gamegrid">
         {games.map(game => (
-          <li key={game.id}>
-            <GameComponent game={game} markAsFinished={markAsFinished} />
-          </li>
+          <GameComponent key={game.id} game={game} markAsFinished={markAsFinished} />
         ))}
-      </ol>
+      </div>
     </>
   );
 };
-
