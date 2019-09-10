@@ -8,18 +8,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  flex-grow: 10;
+}
+
 .gamegrid {
   display: flex;
   flex-wrap: wrap;
 }
 
-.game {
+.card {
   margin: 0.25rem;
   padding: 0.5rem;
-  width: 10rem;
   background-color: #eee;
   border: #bbb solid 0.05rem;
   border-radius: 0.25rem;
+}
+
+.game {
+  width: 10rem;
+  margin: 0.25rem;
 
   display: flex;
   flex-flow: column;

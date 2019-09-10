@@ -5,7 +5,7 @@ type GameComponentProps = { game: Game; markAsFinished: (id: number) => void };
 
 export const GameComponent = ({ game, markAsFinished }: GameComponentProps) => {
   return (
-    <div key={game.id} className="game">
+    <div key={game.id} className="game card">
       <div className="title"><div className="year">{game.year}</div>{game.title}</div>
       <div className="thumbnail">
         <img src={game.img} alt={game.title} />
