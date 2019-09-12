@@ -1,9 +1,9 @@
 import React from 'react';
-import { Game } from '../gameClientAPI';
+import { useGames } from '../useGames';
 
-type TotalsProps = { games: Game[] };
+export const Totals = () => {
+  const { games } = useGames();
 
-export const Totals = ({ games }: TotalsProps) => {
   const totalGames = games.length;
   const inProgress = games.filter(g => g.status === 'in-progress').length;
   const finished = games.filter(g => g.status === 'finished').length;

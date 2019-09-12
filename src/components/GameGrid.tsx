@@ -1,12 +1,14 @@
 import React from 'react';
-import { Game } from '../gameClientAPI';
 import { GameComponent } from './GameComponent';
+import { useGames } from '../useGames';
 
-type GameGridProps = { games: Game[]; markAsFinished: (id: number) => void };
-
-export const GameGrid = ({ games, markAsFinished }: GameGridProps) => {
+export const GameGrid = () => {
+  const { games, error, isPending, markAsFinished } = useGames();
+  
   return (
     <div className="gamegrid">
+      {error && <pre>ERROR! {error}...</pre>}
+      {isPending && <pre>LOADING...</pre>}
       {games.map(game => (
         <GameComponent key={game.id} game={game} markAsFinished={markAsFinished} />
       ))}
