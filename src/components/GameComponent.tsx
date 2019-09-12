@@ -1,5 +1,5 @@
 import React from 'react';
-import { Game } from './gameClientAPI';
+import { Game } from '../gameClientAPI';
 
 type GameComponentProps = { game: Game; markAsFinished: (id: number) => void };
 
