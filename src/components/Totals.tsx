@@ -1,8 +1,8 @@
 import React from 'react';
-import { gamesContext } from '../GamesContext';
+import { useGamesContext } from '../GamesContext';
 
 export const Totals = () => {
-  const { games } = React.useContext(gamesContext);
+  const { games } = useGamesContext();
 
   const totalGames = games.length;
   const inProgress = games.filter(g => g.status === 'in-progress').length;

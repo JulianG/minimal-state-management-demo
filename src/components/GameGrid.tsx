@@ -1,10 +1,10 @@
 import React from 'react';
 import { GameComponent } from './GameComponent';
-import { gamesContext } from '../GamesContext';
+import { useGamesContext } from '../GamesContext';
 
 export const GameGrid = () => {
-  const { games, error, isPending, markAsFinished } = React.useContext(gamesContext);
-  
+  const { games, error, isPending, markAsFinished } = useGamesContext();
+
   return (
     <div className="gamegrid">
       {error && <pre>ERROR! {error}...</pre>}
