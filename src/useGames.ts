@@ -1,22 +1,14 @@
-import React from 'react';
 import { useAsyncFunction } from './useAsyncFunction';
 import { Game, getGames, setGameStatus } from './gameClientAPI';
 
 const emptyList: Game[] = [];
 
-const useFetchedGames = () => {
-  const [fetchedGames, error, isPending] = useAsyncFunction(getGames, emptyList);
-
-  const [games, setGames] = React.useState(emptyList);
-  React.useEffect(() => {
-    setGames(fetchedGames);
-  }, [fetchedGames]);
-
-  return { games, setGames, error, isPending };
-};
-
 export const useGames = () => {
-  const { games, error, isPending, setGames } = useFetchedGames();
+  const { value: games, error, isPending, mutate: setGames } = useAsyncFunction(
+    'getGames',
+    getGames,
+    emptyList
+  );
 
   const updateGame = (game: Game) => {
     const index = games.findIndex(g => g.id === game.id);
