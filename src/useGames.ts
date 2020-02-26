@@ -1,16 +1,12 @@
-import React from 'react';
-import { useAsyncFunction } from './useAsyncFunction';
+import useSWR from 'swr';
 import { Game, getGames, setGameStatus } from './gameClientAPI';
 
-const emptyList: Game[] = [];
-
 const useFetchedGames = () => {
-  const [fetchedGames, error, isPending] = useAsyncFunction(getGames, emptyList);
+  const { data, error, mutate } = useSWR('getGames', getGames); 
 
-  const [games, setGames] = React.useState(emptyList);
-  React.useEffect(() => {
-    setGames(fetchedGames);
-  }, [fetchedGames]);
+  const games = data || []
+  const isPending = !data
+  const setGames = mutate
 
   return { games, setGames, error, isPending };
 };
