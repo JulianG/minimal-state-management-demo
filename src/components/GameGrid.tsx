@@ -1,9 +1,9 @@
 import React from 'react';
 import { GameComponent } from './GameComponent';
-import { useGamesContext } from '../GamesContext';
+import { useGames } from '../useGames';
 
 export const GameGrid = () => {
-  const { games, error, isPending, markAsFinished } = useGamesContext();
+  const { games, error, isPending, markAsFinished } = useGames();
 
   return (
     <div className="gamegrid">
